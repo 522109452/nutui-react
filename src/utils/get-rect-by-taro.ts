@@ -35,6 +35,7 @@ export const getRectByTaro = async (element: any): Promise<Rect> => {
     return new Promise((resolve, reject) => {
       if (lru.has(element)) {
         resolve(lru.get(element) as Rect)
+        return
       }
       createSelectorQuery()
         .select(`#${element.uid}`)

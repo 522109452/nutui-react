@@ -45,6 +45,9 @@ importers:
       lodash.kebabcase:
         specifier: ^4.1.1
         version: 4.1.1
+      quick-lru:
+        specifier: ^4.0.1
+        version: 4.0.1
       react-transition-group:
         specifier: ^4.4.5
         version: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -111,10 +114,10 @@ importers:
         version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
       '@tarojs/plugin-platform-alipay':
         specifier: 3.6.22
-        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
+        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
       '@tarojs/plugin-platform-weapp':
         specifier: 3.6.22
-        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
+        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/react':
         specifier: 3.6.22
         version: 3.6.22(react@18.3.1)
@@ -492,7 +495,7 @@ importers:
         version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/plugin-platform-alipay':
         specifier: 3.6.22
-        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
+        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
       '@tarojs/plugin-platform-h5':
         specifier: 3.6.22
         version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
@@ -501,7 +504,7 @@ importers:
         version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/plugin-platform-qq':
         specifier: 3.6.22
-        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
+        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/plugin-platform-swan':
         specifier: 3.6.22
         version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
@@ -510,7 +513,7 @@ importers:
         version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/plugin-platform-weapp':
         specifier: 3.6.22
-        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
+        version: 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/react':
         specifier: 3.6.22
         version: 3.6.22(react@18.3.1)
@@ -15865,7 +15868,7 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.3.4)(postcss@8.4.41)':
+  '@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)':
     dependencies:
       '@tarojs/components': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
       '@tarojs/service': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
@@ -15877,6 +15880,7 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
@@ -15915,9 +15919,9 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-qq@3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)':
+  '@tarojs/plugin-platform-qq@3.6.22(@types/react@18.3.4)(postcss@8.4.41)':
     dependencies:
-      '@tarojs/plugin-platform-weapp': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
+      '@tarojs/plugin-platform-weapp': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/service': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/shared': 3.6.22
     transitivePeerDependencies:
@@ -15927,7 +15931,6 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
-      - react
       - supports-color
       - vue
 
@@ -15961,7 +15964,7 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-weapp@3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)':
+  '@tarojs/plugin-platform-weapp@3.6.22(@types/react@18.3.4)(postcss@8.4.41)':
     dependencies:
       '@tarojs/components': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
       '@tarojs/service': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
@@ -15973,7 +15976,6 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
-      - react
       - supports-color
       - vue
 
@@ -16107,12 +16109,12 @@ snapshots:
     dependencies:
       '@parcel/css': 1.14.0
       '@tarojs/helper': 3.6.22
-      '@tarojs/plugin-platform-alipay': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
+      '@tarojs/plugin-platform-alipay': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
       '@tarojs/plugin-platform-jd': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
-      '@tarojs/plugin-platform-qq': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
+      '@tarojs/plugin-platform-qq': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/plugin-platform-swan': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/plugin-platform-tt': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
-      '@tarojs/plugin-platform-weapp': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)(react@18.3.1)
+      '@tarojs/plugin-platform-weapp': 3.6.22(@types/react@18.3.4)(postcss@8.4.41)
       '@tarojs/runner-utils': 3.6.22
       '@tarojs/runtime': 3.6.22
       '@tarojs/shared': 3.6.22
