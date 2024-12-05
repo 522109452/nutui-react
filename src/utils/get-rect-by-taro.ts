@@ -1,5 +1,8 @@
 import { createSelectorQuery } from '@tarojs/taro'
+import QuickLRU from 'quick-lru'
 import { getRect, inBrowser } from './use-client-rect'
+
+const lru = new QuickLRU({ maxSize: 10 })
 
 export interface Rect {
   dataset: Record<string, any>
@@ -30,10 +33,16 @@ export const getRectByTaro = async (element: any): Promise<Rect> => {
     }
     // 小程序下的逻辑
     return new Promise((resolve, reject) => {
+      if (lru.has(element)) {
+        resolve(lru.get(element) as Rect)
+      }
       createSelectorQuery()
         .select(`#${element.uid}`)
         .boundingClientRect()
         .exec(([rects]) => {
+          if (rects) {
+            lru.set(element, rects)
+          }
           resolve(rects)
         })
     })
