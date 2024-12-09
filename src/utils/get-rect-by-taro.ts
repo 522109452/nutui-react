@@ -1,8 +1,8 @@
 import { createSelectorQuery } from '@tarojs/taro'
-import QuickLRU from 'quick-lru'
+import MiniLru from '@/utils/lru'
 import { getRect, inBrowser } from './use-client-rect'
 
-const lru = new QuickLRU({ maxSize: 10 })
+const lru = new MiniLru(10)
 
 export interface Rect {
   dataset: Record<string, any>
